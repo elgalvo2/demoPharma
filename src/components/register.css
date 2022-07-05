@@ -1,0 +1,19 @@
+.register-layout{
+   width: 100%;
+   display: grid;
+   grid-template-columns: 40% 57%;
+   grid-template-rows: 10vh 50vh; 
+   grid-template-areas: 
+   "title title"
+   "form list";
+   column-gap: 3%;
+}
+.title{
+    grid-area: title;
+}
+.form{
+    grid-area: form;
+}
+.list{
+    grid-area: list;
+}

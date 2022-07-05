@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 8% 92%;
+  grid-template-areas: '"header""app-body"';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Nav {
+  width: 20vw;
+  height: 100vh;
+  position: fixed;
+  border: 3px solid grey;
+  top: 0;
+  left: -100%;
+  /* transform: translateX(-100%); */
+  background-color: aliceblue;
+  display: grid;
+  grid-template-rows: max-content;
+  transition: left 700ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.Nav.Nav-Open {
+  left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
+  width: 100%;
+  height: fit-content;
+  border: 1px solid grey;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5%
+}
+
+.nav-item-container{
+  display: flex;
+  flex-direction:column;
+}
+.Nav-item{
+  border: 1px solid grey;
+  text-align: center;
+  padding: 5%;
+  font-weight: bold;
+  transition: all 300ms;
+  transition: color 5ms;
+}
+.Nav-item:hover{
+  cursor: pointer;
+  background-color: grey;
+  box-shadow: inset 1px 1px 1px gray;
+}
+
+.Nav-item:active{
+  box-shadow: inset 1px 1px 10px black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Nav-button {
+  margin-left: 1%;
+  height: inherit;
+  width: fit-content;
+  border: 2px solid gray;
+  line-height: 0;
+  align-items: center;
+  border-radius: 5%;
+  transition: all 350ms;
+  box-shadow: 1px 1px 15px grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Nav-button:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 7px grey;
+}
+
+.app-title {
+  height: inherit;
+}
+
+.Nav-header {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
+  align-items: center;
+}
+.Nav-title{
+  margin-left: 5%;
+}
+
+.Body{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.body-app{
+  width: 100%;
+  border: 5px solid black;
+  position: relative;
+  padding: 2%;
 }
