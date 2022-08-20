@@ -7,20 +7,25 @@ textarea{
     display: grid;
     padding: 15px;
     width: 100%;
-    border: 3px solid grey;
-    border-radius: 5px;
+    /* border: 3px solid grey; */
+    background-color: #2C394B;
     grid-template-columns: 30% 10% 10% 50% ;
-    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    grid-template-rows: 7vh 1fr 1fr 2fr 2fr 1fr;
     grid-template-areas: 
+    "title title title title"
     "form-code . form-name form-name"
     "form-cant form-cant form-variation form-variation"
     "form-info form-info form-info form-info"
     "form-considerations form-considerations form-considerations form-considerations"
     "form-actions form-actions form-actions form-actions";
     align-items: center;
-    justify-items: center;
+    justify-items: start;
 }
 
+.form-title{
+    align-self: start;
+    grid-area: title;
+}
 .form-code{
     align-self:center;
     grid-area: form-code;
@@ -48,6 +53,7 @@ textarea{
 }
 
 .form-actions{
+    margin: 0px auto;
     grid-area: form-actions;
     display: flex;
     flex-direction: row;
@@ -67,4 +73,16 @@ textarea{
     resize: none;
     width: 100%;
     height: 10vh;
+}
+
+.helper{
+    position: fixed;
+    width: 130px;
+    height: fit-content;
+    font-size: 9px;
+    border:1px solid grey ;
+    transform: translateZ(50%);
+    background-color: antiquewhite;
+    color:red;
+    padding: 3px;
 }

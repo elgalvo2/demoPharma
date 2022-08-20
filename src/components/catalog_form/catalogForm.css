@@ -1,35 +1,26 @@
-.catalog{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: max-content;
-    flex-wrap: wrap;
-    row-gap: 2vh;
-}
-.catalog>h2{
-    text-align: start;
-    font-size: 25px;
-}
-.catalog-layout{
-    display: grid;
-    grid-template-columns: 40% 55%;
-    column-gap: 10px;
-    justify-items: center;
-}
+
 
 .catalog-form{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    grid-template-rows: 8vh 8vh 35vh;
-    grid-template-areas:
-                        "code name . ." 
-                        "dosis-input auth-months send-button ideal-dosis"
-                        "info info info info";
-    border: 3px solid grey;
     padding: 15px;
-    border-radius: 10px;
+    width: 100%;
+    /* border-radius: 5px; */
+    background-color: #2C394B;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 7vh 8vh 8vh 25vh 25vh;
+    grid-template-areas:
+                        "title title title title"
+                        "code name . ." 
+                        "dosis-input auth-months send-button send-button"
+                        "info info info info"
+                        "consi consi consi consi";
     align-items: center;
-    justify-items: center;
+    justify-items: start;
+    row-gap: 1vh;
+}
+
+.form-title{
+    grid-area: title;
 }
 
 .code{
@@ -37,7 +28,15 @@
 }
 
 .name{
+    width:100%;
     grid-area: name;
+}
+.name-wrap{
+    width: 15vw;
+    
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
 }
 .dosis-input{
     grid-area: dosis-input;
@@ -48,6 +47,18 @@
 .send-button{
     grid-area: send-button;
     align-self: end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+.send-button>p{
+    width: 35%;
+    height: 5vh;
+    line-height: 1.5rem;
+    border-radius: 3px;
+    background-color: rgb(180, 180, 180);
+    color: black;
 }
 .send-button>button:hover{
     cursor: pointer;
@@ -60,18 +71,20 @@
     border: 1px solid grey;
     border-radius: 5px;
     padding: 15px;
-    min-height:30vh;
-    max-height:30vh;
+    min-height:20vh;
+    max-height:20vh;
     overflow-x: hidden;
     word-wrap: break-word;
     width: 100%;
 }
-.catalog-list{
-    width: 100%;
-    height: 76vh;
-    
+.consi{
+    grid-area: consi;
+    border: 1px solid grey;
+    border-radius: 5px;
     padding: 15px;
-    padding-top: 5px;
-    
-    align-items: center;
+    min-height:20vh;
+    max-height:20vh;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    width: 100%;
 }

@@ -1,0 +1,89 @@
+
+.modal-div{
+    background-color: #2C394B;
+    padding:2%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.modal-form-actions{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.modal-form-actions>button{
+    width:78px;
+    padding: 1%;
+    transition: all 300ms;
+}
+
+.modal-form{
+    width: 100%;
+    display: grid;  
+    margin: 0 auto;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 9vh 9vh 15vh 15vh;
+    grid-template-areas: 
+    "code code name name ."
+    "variation variation . cantity cantity"
+    "info info info . ."
+    "consi consi consi  . .";
+    color:white;
+}
+
+
+.modal-form-actions>button:hover{
+    cursor: pointer;
+}
+
+.modal-form-code{
+    grid-area: code;
+}
+
+.modal-form-name{
+    grid-area: name;
+}
+
+.modal-form-variation{
+    grid-area: variation;
+}
+
+.modal-form-cantity{
+    grid-area: cantity;
+}
+
+.modal-form-info{
+    grid-area: info;
+}
+
+.modal-form-considerations{
+    grid-area: consi;
+}
+
+.modal-form-info>textarea,.modal-form-considerations>textarea{
+    resize: none;
+    width: 50vw;
+}
+
+@media (max-width:730px) {
+    .modal-form{
+        width: 100%;
+        display: grid;  
+        margin: 0 auto;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 9vh 9vh 9vh 15vh 15vh ;
+        grid-template-areas: 
+        "code name name"
+        "variation variation . " 
+        "cantity cantity ."
+        "info info info"
+        "consi consi consi";
+        color:white;
+    }
+    
+}

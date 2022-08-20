@@ -1,0 +1,21 @@
+.modal-delete{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    gap:3vh;
+}
+
+.modal-delete-actions{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.modal-delete-actions>button{
+    width: 15vw;
+    height: 5%;
+    padding:2px;
+}

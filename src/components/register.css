@@ -1,19 +1,58 @@
-.register-layout{
-   width: 100%;
-   display: grid;
-   grid-template-columns: 40% 57%;
-   grid-template-rows: 10vh 50vh; 
-   grid-template-areas: 
-   "title title"
-   "form list";
-   column-gap: 3%;
+ 
+.register-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 57%;
+    grid-template-rows: 83vh;
+    grid-template-areas:
+    "form list";
+    column-gap: 3%;
 }
-.title{
-    grid-area: title;
-}
-.form{
+
+.form {
     grid-area: form;
 }
-.list{
+
+.list {
     grid-area: list;
+}
+
+.modal-background {
+    width: 100vw;
+    height: 100%;
+    opacity: .7;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: black;
+
+}
+
+.register-modal {
+    position: absolute;
+    top: 10%;
+    background-color: #0f0f0f;
+    margin: 0px auto;
+    width: 60vw;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    padding: 3%;
+    animation: in 400ms ease-in;
+}
+
+dialog::backdrop {
+    opacity: .70;
+    background: black;
+}
+
+@keyframes in {
+    from {
+        transform: translateY(-300%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }

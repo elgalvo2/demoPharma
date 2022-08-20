@@ -1,0 +1,90 @@
+.info-bar {
+  position: absolute;
+  bottom: 3%;
+  right: -40%;
+  width: 25%;
+  height: 10vh;
+  background-color: #373737;
+  border-radius: 5px 0 0 5px;
+  display: grid;
+  grid-template-columns: 10vh 60% .5fr;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  justify-items: start;
+  color: white;
+}
+
+
+.info-bar-success>.noti-icon {
+  content: url('../../assets/icons/check-icon.png');
+  width: 10vh;
+  height: 10vh;
+  transform: scale(.4);
+}
+
+.info-bar-success>.noti-decorator {
+  width: 100%;
+  height: 100%;
+  background-color: #008000;
+}
+
+
+
+.info-bar-fail>.noti-icon {
+  content: url('../../assets/icons/cross_icon.png');
+  width: 10vh;
+  height: 10vh;
+  transform: scale(.3);
+}
+
+.info-bar-fail>.noti-decorator {
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000;
+}
+
+
+.info-bar-info>.noti-icon {
+  content: url('../../assets/icons/info_icon.png');
+  width: 10vh;
+  height: 10vh;
+  transform: scale(.3);
+}
+
+.info-bar-info>.noti-decorator {
+  width: 100%;
+  height: 100%;
+  background-color: #0000ff;
+}
+
+
+.show {
+  right: 0%;
+  animation: entering 300ms ease-in;
+}
+
+@keyframes entering {
+  from {
+    right: -40%;
+  }
+
+  to {
+    right: 0%;
+  }
+}
+
+.close {
+  right: -40%;
+  animation: leaving 300ms ease-in;
+}
+
+@keyframes leaving {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: -40%;
+  }
+}
